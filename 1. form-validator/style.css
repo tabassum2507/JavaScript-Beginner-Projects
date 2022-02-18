@@ -1,11 +1,105 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #a2caff;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
-    position: relative;
-    top: 50%;
-    left: 50%;
+  max-width: 400px;
+  margin: 20px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 35px 68px 0 rgba(136, 174, 222, 0.42),
+    inset 0 -8px 16px 0 #b9d1f1;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form-control {
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 0px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  border: none;
+  padding: 12px 30px;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 8px;
+  background-image: linear-gradient(90deg, #5fc7ff 50%, #43a8ff 100%);
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+  transition: background-position 256ms;
+  will-change: background-position;
+  cursor: pointer;
+}
+
+.form button:hover {
+    background-position: 0% 20%;
 }
