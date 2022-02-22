@@ -118,8 +118,3 @@ button:focus {
   height: auto;
 }
 
-@media (max-width: 600px) {
-  .currency input {
-    width: 200px;
-  }
-}
